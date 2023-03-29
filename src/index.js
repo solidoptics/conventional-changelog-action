@@ -86,7 +86,7 @@ async function run() {
 
     const config = conventionalConfigFile && requireScript(conventionalConfigFile)
 
-    conventionalRecommendedBump({ preset, tagPrefix, config, skipUnstable: !prerelease }, async (error, recommendation) => {
+    conventionalRecommendedBump({ preset, tagPrefix, config, skipUnstable: true }, async (error, recommendation) => {
       if (error) {
         core.setFailed(error.message)
         return
